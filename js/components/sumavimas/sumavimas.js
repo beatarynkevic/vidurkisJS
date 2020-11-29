@@ -10,7 +10,7 @@ function sarasoSuma(skaiciuSarasas) {       //kad atliktu funkcija reikalingas y
     for (let i = 0; i < skaiciuSarasas.length; i++) {
         const skaicius = skaiciuSarasas[i];
 
-        if (typeof skaicius !== 'number') {          //ar tai yra skaicius?
+        if (!arNormalusSkaicius(skaicius)) {          //ar tai yra skaicius?
             console.warn('WARNING: skaiciu sarase rasta ne skaiciaus tipo reiksme');
             continue;
         }

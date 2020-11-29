@@ -1,6 +1,7 @@
 import { skaiciai } from './data/skaiciai.js';
 import { vidurkis } from './components/vidurkis/vidurkis.js';
 import { skaiciai2 } from './data/skaiciai2.js';
+import { atsPrint } from './components/atsPrint/atsPrint.js';
 // import { atsPrint } from './components/atsPrint.js';
 
 const ats = vidurkis(skaiciai);
@@ -17,4 +18,4 @@ console.log(ats2String);
 const rez1DOM = document.querySelector('#rez1');
 console.log(rez1DOM);
 
-rez1DOM.innerText = atsString;
+rez1DOM.innerText = atsPrint(skaiciai, ats);
