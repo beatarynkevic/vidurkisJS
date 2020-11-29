@@ -1,4 +1,4 @@
-function arPrasmingaSarasas(sarasas) {
+function arPrasmingasSarasas(sarasas) {
     if (!Array.isArray(sarasas)) {
         console.error('ERROR: duotas ne array.');
         return false;
@@ -7,9 +7,14 @@ function arPrasmingaSarasas(sarasas) {
         console.error('ERROR: duotas array yra tuscias.');
         return false;
     }
+    return true;
 }
 
 function arNormalusSkaicius(skaicius, tikrinamoObjektoPavadinimas) {
+    if (typeof tikrinamoObjektoPavadinimas !== 'string') {
+        console.warn('WARNING: skaiciaus tipo tikrinimui nera duotas tikrinamo objekto pavadinimas.');
+        tikrinamoObjektoPavadinimas = 'reikme/objektas';
+    }
     if (typeof skaicius !== 'number') {             // Ar skaiciai?
         console.error(`Error: gautas ${tikrinamoObjektoPavadinimas} nera skaiciuaus tipo.`);
         return false;
@@ -23,4 +28,4 @@ function arNormalusSkaicius(skaicius, tikrinamoObjektoPavadinimas) {
 }
 
 
-export { arPrasmingaSarasas }
+export { arPrasmingasSarasas, arNormalusSkaicius }

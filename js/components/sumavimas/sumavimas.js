@@ -1,6 +1,6 @@
-import { arPrasmingaSarasas, arNormalusSkaicius } from '../validacijos/validacijos.js';
+import { arPrasmingasSarasas, arNormalusSkaicius } from '../validacijos/validacijos.js';
 
-function sarasoSuma(skaiciuSarasas, arNormalusSkaicius) {       //kad atliktu funkcija reikalingas yra skaiciuSarasas
+function sarasoSuma(skaiciuSarasas) {       //kad atliktu funkcija reikalingas yra skaiciuSarasas
     if (!arPrasmingasSarasas(skaiciuSarasas)) {
         return false;
     }
